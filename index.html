@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Madhawa Dissanayake - CS Student specializing in Machine Learning, Algorithmic Trading, and Photography">
+    <meta name="keywords" content="Machine Learning, Algorithmic Trading, Photography, Portfolio, Python, TensorFlow">
+    <meta name="author" content="Madhawa Dissanayake">
+    <title>Madhawa Dissanayake | ML Engineer & Trader</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#6366f1',
+                        secondary: '#8b5cf6',
+                        accent: '#ec4899',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-gray-50">
+
+    <!-- Navigation Bar -->
+    <nav id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="#home" class="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                        MD
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="nav-link text-gray-700 hover:text-primary transition-colors">Home</a>
+                        <a href="#about" class="nav-link text-gray-700 hover:text-primary transition-colors">About</a>
+                        <a href="#projects" class="nav-link text-gray-700 hover:text-primary transition-colors">Projects</a>
+                        <a href="#photography" class="nav-link text-gray-700 hover:text-primary transition-colors">Photography</a>
+                        <a href="#trading" class="nav-link text-gray-700 hover:text-primary transition-colors">Trading</a>
+                        <a href="#contact" class="nav-link text-gray-700 hover:text-primary transition-colors">Contact</a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-primary focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                            <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="mobile-nav-link block px-3 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md">Home</a>
+                <a href="#about" class="mobile-nav-link block px-3 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md">About</a>
+                <a href="#projects" class="mobile-nav-link block px-3 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md">Projects</a>
+                <a href="#photography" class="mobile-nav-link block px-3 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md">Photography</a>
+                <a href="#trading" class="mobile-nav-link block px-3 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md">Trading</a>
+                <a href="#contact" class="mobile-nav-link block px-3 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <!-- Gradient Background -->
+        <div class="absolute inset-0 bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 opacity-90"></div>
+        <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
+
+        <!-- Content -->
+        <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 fade-in">
+            <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 animate-fade-in">
+                Hi, I'm <span class="text-yellow-300">Madhawa Dissanayake</span>
+            </h1>
+            <p class="text-xl sm:text-2xl lg:text-3xl text-white/90 mb-4 animate-fade-in-delay-1">
+                CS Student | Machine Learning Engineer
+            </p>
+            <p class="text-lg sm:text-xl text-white/80 mb-8 max-w-2xl mx-auto animate-fade-in-delay-2">
+                Specializing in Algorithmic Trading & Wildlife Photography
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-delay-3">
+                <a href="#projects" class="px-8 py-3 bg-white text-primary font-semibold rounded-full hover:bg-gray-100 transform hover:scale-105 transition-all shadow-lg">
+                    View My Work
+                </a>
+                <a href="#contact" class="px-8 py-3 bg-transparent border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-primary transform hover:scale-105 transition-all">
+                    Get In Touch
+                </a>
+            </div>
+
+            <!-- Scroll Down Indicator -->
+            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+                <a href="#about" class="text-white">
+                    <i class="fas fa-chevron-down text-2xl"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-on-scroll">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">About Me</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Image -->
+                <div class="fade-in-on-scroll">
+                    <div class="relative">
+                        <div class="aspect-square rounded-2xl overflow-hidden shadow-2xl">
+                            <img src="https://via.placeholder.com/600x600/6366f1/ffffff?text=Your+Photo+Here"
+                                 alt="Profile"
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-primary to-secondary rounded-2xl -z-10"></div>
+                    </div>
+                </div>
+
+                <!-- Content -->
+                <div class="fade-in-on-scroll">
+                    <h3 class="text-3xl font-bold text-gray-900 mb-6">Passionate About AI & Financial Markets</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        I'm a Computer Science student with a deep passion for Machine Learning and Algorithmic Trading.
+                        My journey combines cutting-edge AI research with practical applications in financial markets.
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Equipped with high-performance hardware including an RTX 4090, I develop and train sophisticated
+                        models for market prediction, options strategies, and automated trading systems. When I'm not coding,
+                        you'll find me capturing wildlife through my lens.
+                    </p>
+
+                    <!-- Skills -->
+                    <div class="space-y-4 mt-8">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold text-gray-700">Machine Learning & AI</span>
+                                <span class="text-gray-600">95%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-gradient-to-r from-primary to-secondary h-2 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold text-gray-700">Python & Data Science</span>
+                                <span class="text-gray-600">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-gradient-to-r from-primary to-secondary h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold text-gray-700">Algorithmic Trading</span>
+                                <span class="text-gray-600">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-gradient-to-r from-primary to-secondary h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tech Stack -->
+                    <div class="mt-8">
+                        <h4 class="font-semibold text-gray-900 mb-4">Tech Stack</h4>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">Python</span>
+                            <span class="px-4 py-2 bg-orange-100 text-orange-700 rounded-full text-sm font-medium">TensorFlow</span>
+                            <span class="px-4 py-2 bg-red-100 text-red-700 rounded-full text-sm font-medium">PyTorch</span>
+                            <span class="px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-medium">Pandas</span>
+                            <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">NumPy</span>
+                            <span class="px-4 py-2 bg-yellow-100 text-yellow-700 rounded-full text-sm font-medium">Scikit-learn</span>
+                            <span class="px-4 py-2 bg-indigo-100 text-indigo-700 rounded-full text-sm font-medium">SQL</span>
+                            <span class="px-4 py-2 bg-pink-100 text-pink-700 rounded-full text-sm font-medium">Git</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-on-scroll">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Machine Learning Projects</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-4"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Explore my portfolio of ML projects, from market prediction models to advanced trading algorithms
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow fade-in-on-scroll group">
+                    <div class="relative h-48 bg-gradient-to-br from-blue-400 to-blue-600 overflow-hidden">
+                        <img src="https://via.placeholder.com/400x300/3b82f6/ffffff?text=ML+Model+Visualization"
+                             alt="Project"
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">SPY/QQQ Prediction Model</h3>
+                        <p class="text-gray-600 mb-4">
+                            Advanced LSTM model for predicting S&P 500 and Nasdaq-100 ETF price movements with 87% accuracy.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-medium">Python</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-medium">TensorFlow</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-medium">Pandas</span>
+                        </div>
+                        <!-- Placeholder Chart -->
+                        <div class="bg-gray-100 rounded-lg p-4 mb-4">
+                            <div class="text-xs text-gray-500 mb-2">Model Accuracy</div>
+                            <div class="h-24 flex items-end gap-1">
+                                <div class="flex-1 bg-primary rounded-t" style="height: 65%"></div>
+                                <div class="flex-1 bg-primary rounded-t" style="height: 75%"></div>
+                                <div class="flex-1 bg-primary rounded-t" style="height: 82%"></div>
+                                <div class="flex-1 bg-secondary rounded-t" style="height: 87%"></div>
+                            </div>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="#" class="flex-1 text-center px-4 py-2 bg-gradient-to-r from-primary to-secondary text-white rounded-lg hover:shadow-lg transition-shadow">
+                                View Details
+                            </a>
+                            <a href="#" class="px-4 py-2 border-2 border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-colors">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow fade-in-on-scroll group">
+                    <div class="relative h-48 bg-gradient-to-br from-purple-400 to-purple-600 overflow-hidden">
+                        <img src="https://via.placeholder.com/400x300/8b5cf6/ffffff?text=Trading+Algorithm"
+                             alt="Project"
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Options Strategy Optimizer</h3>
+                        <p class="text-gray-600 mb-4">
+                            Automated system for Iron Condor and other options strategies with real-time risk management.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-medium">Python</span>
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-xs font-medium">NumPy</span>
+                            <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-xs font-medium">QuantLib</span>
+                        </div>
+                        <div class="bg-gray-100 rounded-lg p-4 mb-4">
+                            <div class="text-xs text-gray-500 mb-2">Backtesting Results</div>
+                            <div class="h-24 flex items-end gap-1">
+                                <div class="flex-1 bg-green-500 rounded-t" style="height: 45%"></div>
+                                <div class="flex-1 bg-green-500 rounded-t" style="height: 60%"></div>
+                                <div class="flex-1 bg-green-500 rounded-t" style="height: 55%"></div>
+                                <div class="flex-1 bg-green-600 rounded-t" style="height: 72%"></div>
+                            </div>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="#" class="flex-1 text-center px-4 py-2 bg-gradient-to-r from-primary to-secondary text-white rounded-lg hover:shadow-lg transition-shadow">
+                                View Details
+                            </a>
+                            <a href="#" class="px-4 py-2 border-2 border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-colors">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow fade-in-on-scroll group">
+                    <div class="relative h-48 bg-gradient-to-br from-pink-400 to-pink-600 overflow-hidden">
+                        <img src="https://via.placeholder.com/400x300/ec4899/ffffff?text=Deep+Learning"
+                             alt="Project"
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Sentiment Analysis Trading Bot</h3>
+                        <p class="text-gray-600 mb-4">
+                            NLP-powered trading bot that analyzes market sentiment from news and social media for trading signals.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-medium">Python</span>
+                            <span class="px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-xs font-medium">BERT</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-medium">PyTorch</span>
+                        </div>
+                        <div class="bg-gray-100 rounded-lg p-4 mb-4">
+                            <div class="text-xs text-gray-500 mb-2">Sentiment Accuracy</div>
+                            <div class="h-24 flex items-end gap-1">
+                                <div class="flex-1 bg-pink-500 rounded-t" style="height: 70%"></div>
+                                <div class="flex-1 bg-pink-500 rounded-t" style="height: 78%"></div>
+                                <div class="flex-1 bg-pink-500 rounded-t" style="height: 85%"></div>
+                                <div class="flex-1 bg-pink-600 rounded-t" style="height: 91%"></div>
+                            </div>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="#" class="flex-1 text-center px-4 py-2 bg-gradient-to-r from-primary to-secondary text-white rounded-lg hover:shadow-lg transition-shadow">
+                                View Details
+                            </a>
+                            <a href="#" class="px-4 py-2 border-2 border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-colors">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 4 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow fade-in-on-scroll group">
+                    <div class="relative h-48 bg-gradient-to-br from-green-400 to-green-600 overflow-hidden">
+                        <img src="https://via.placeholder.com/400x300/10b981/ffffff?text=Neural+Network"
+                             alt="Project"
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Portfolio Optimization Engine</h3>
+                        <p class="text-gray-600 mb-4">
+                            AI-driven portfolio optimization using Modern Portfolio Theory and machine learning techniques.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-medium">Python</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-medium">SciPy</span>
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-xs font-medium">Pandas</span>
+                        </div>
+                        <div class="bg-gray-100 rounded-lg p-4 mb-4">
+                            <div class="text-xs text-gray-500 mb-2">Sharpe Ratio</div>
+                            <div class="h-24 flex items-end gap-1">
+                                <div class="flex-1 bg-green-500 rounded-t" style="height: 50%"></div>
+                                <div class="flex-1 bg-green-500 rounded-t" style="height: 65%"></div>
+                                <div class="flex-1 bg-green-500 rounded-t" style="height: 78%"></div>
+                                <div class="flex-1 bg-green-600 rounded-t" style="height: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="#" class="flex-1 text-center px-4 py-2 bg-gradient-to-r from-primary to-secondary text-white rounded-lg hover:shadow-lg transition-shadow">
+                                View Details
+                            </a>
+                            <a href="#" class="px-4 py-2 border-2 border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-colors">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 5 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow fade-in-on-scroll group">
+                    <div class="relative h-48 bg-gradient-to-br from-indigo-400 to-indigo-600 overflow-hidden">
+                        <img src="https://via.placeholder.com/400x300/6366f1/ffffff?text=Time+Series"
+                             alt="Project"
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Volatility Prediction System</h3>
+                        <p class="text-gray-600 mb-4">
+                            GARCH and ML hybrid model for predicting market volatility with real-time risk assessment.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-medium">Python</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-medium">TensorFlow</span>
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-xs font-medium">statsmodels</span>
+                        </div>
+                        <div class="bg-gray-100 rounded-lg p-4 mb-4">
+                            <div class="text-xs text-gray-500 mb-2">Prediction Accuracy</div>
+                            <div class="h-24 flex items-end gap-1">
+                                <div class="flex-1 bg-indigo-500 rounded-t" style="height: 68%"></div>
+                                <div class="flex-1 bg-indigo-500 rounded-t" style="height: 73%"></div>
+                                <div class="flex-1 bg-indigo-500 rounded-t" style="height: 79%"></div>
+                                <div class="flex-1 bg-indigo-600 rounded-t" style="height: 84%"></div>
+                            </div>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="#" class="flex-1 text-center px-4 py-2 bg-gradient-to-r from-primary to-secondary text-white rounded-lg hover:shadow-lg transition-shadow">
+                                View Details
+                            </a>
+                            <a href="#" class="px-4 py-2 border-2 border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-colors">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 6 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow fade-in-on-scroll group">
+                    <div class="relative h-48 bg-gradient-to-br from-yellow-400 to-orange-600 overflow-hidden">
+                        <img src="https://via.placeholder.com/400x300/f59e0b/ffffff?text=Reinforcement+Learning"
+                             alt="Project"
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">RL Trading Agent</h3>
+                        <p class="text-gray-600 mb-4">
+                            Deep Q-Network trading agent that learns optimal strategies through reinforcement learning.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-medium">Python</span>
+                            <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-xs font-medium">PyTorch</span>
+                            <span class="px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-xs font-medium">OpenAI Gym</span>
+                        </div>
+                        <div class="bg-gray-100 rounded-lg p-4 mb-4">
+                            <div class="text-xs text-gray-500 mb-2">Cumulative Returns</div>
+                            <div class="h-24 flex items-end gap-1">
+                                <div class="flex-1 bg-orange-500 rounded-t" style="height: 40%"></div>
+                                <div class="flex-1 bg-orange-500 rounded-t" style="height: 58%"></div>
+                                <div class="flex-1 bg-orange-500 rounded-t" style="height: 72%"></div>
+                                <div class="flex-1 bg-orange-600 rounded-t" style="height: 89%"></div>
+                            </div>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="#" class="flex-1 text-center px-4 py-2 bg-gradient-to-r from-primary to-secondary text-white rounded-lg hover:shadow-lg transition-shadow">
+                                View Details
+                            </a>
+                            <a href="#" class="px-4 py-2 border-2 border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-colors">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photography Gallery Section -->
+    <section id="photography" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-on-scroll">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Photography Portfolio</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-4"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Capturing the beauty of wildlife and nature through my lens
+                </p>
+            </div>
+
+            <!-- Category Filters -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12 fade-in-on-scroll">
+                <button class="gallery-filter px-6 py-2 bg-gradient-to-r from-primary to-secondary text-white rounded-full font-medium hover:shadow-lg transition-shadow" data-category="all">
+                    All
+                </button>
+                <button class="gallery-filter px-6 py-2 bg-gray-200 text-gray-700 rounded-full font-medium hover:bg-gray-300 transition-colors" data-category="wildlife">
+                    Wildlife
+                </button>
+                <button class="gallery-filter px-6 py-2 bg-gray-200 text-gray-700 rounded-full font-medium hover:bg-gray-300 transition-colors" data-category="landscape">
+                    Landscape
+                </button>
+                <button class="gallery-filter px-6 py-2 bg-gray-200 text-gray-700 rounded-full font-medium hover:bg-gray-300 transition-colors" data-category="macro">
+                    Macro
+                </button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="gallery-grid">
+                <!-- Gallery Item 1 -->
+                <div class="gallery-item fade-in-on-scroll cursor-pointer group" data-category="wildlife">
+                    <div class="relative overflow-hidden rounded-xl shadow-lg aspect-square">
+                        <img src="https://source.unsplash.com/600x600/?wildlife,lion"
+                             alt="Wildlife Photography"
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="absolute bottom-4 left-4 text-white">
+                                <h4 class="text-lg font-bold">Wildlife Photography</h4>
+                                <p class="text-sm text-gray-200">Click to view full size</p>
+                            </div>
+                            <div class="absolute top-4 right-4">
+                                <i class="fas fa-search-plus text-white text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="gallery-item fade-in-on-scroll cursor-pointer group" data-category="landscape">
+                    <div class="relative overflow-hidden rounded-xl shadow-lg aspect-square">
+                        <img src="https://source.unsplash.com/600x600/?landscape,mountains"
+                             alt="Landscape Photography"
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="absolute bottom-4 left-4 text-white">
+                                <h4 class="text-lg font-bold">Landscape Photography</h4>
+                                <p class="text-sm text-gray-200">Click to view full size</p>
+                            </div>
+                            <div class="absolute top-4 right-4">
+                                <i class="fas fa-search-plus text-white text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="gallery-item fade-in-on-scroll cursor-pointer group" data-category="wildlife">
+                    <div class="relative overflow-hidden rounded-xl shadow-lg aspect-square">
+                        <img src="https://source.unsplash.com/600x600/?wildlife,eagle"
+                             alt="Wildlife Photography"
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="absolute bottom-4 left-4 text-white">
+                                <h4 class="text-lg font-bold">Wildlife Photography</h4>
+                                <p class="text-sm text-gray-200">Click to view full size</p>
+                            </div>
+                            <div class="absolute top-4 right-4">
+                                <i class="fas fa-search-plus text-white text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="gallery-item fade-in-on-scroll cursor-pointer group" data-category="macro">
+                    <div class="relative overflow-hidden rounded-xl shadow-lg aspect-square">
+                        <img src="https://source.unsplash.com/600x600/?macro,butterfly"
+                             alt="Macro Photography"
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="absolute bottom-4 left-4 text-white">
+                                <h4 class="text-lg font-bold">Macro Photography</h4>
+                                <p class="text-sm text-gray-200">Click to view full size</p>
+                            </div>
+                            <div class="absolute top-4 right-4">
+                                <i class="fas fa-search-plus text-white text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 5 -->
+                <div class="gallery-item fade-in-on-scroll cursor-pointer group" data-category="landscape">
+                    <div class="relative overflow-hidden rounded-xl shadow-lg aspect-square">
+                        <img src="https://source.unsplash.com/600x600/?landscape,sunset"
+                             alt="Landscape Photography"
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="absolute bottom-4 left-4 text-white">
+                                <h4 class="text-lg font-bold">Landscape Photography</h4>
+                                <p class="text-sm text-gray-200">Click to view full size</p>
+                            </div>
+                            <div class="absolute top-4 right-4">
+                                <i class="fas fa-search-plus text-white text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 6 -->
+                <div class="gallery-item fade-in-on-scroll cursor-pointer group" data-category="wildlife">
+                    <div class="relative overflow-hidden rounded-xl shadow-lg aspect-square">
+                        <img src="https://source.unsplash.com/600x600/?wildlife,deer"
+                             alt="Wildlife Photography"
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="absolute bottom-4 left-4 text-white">
+                                <h4 class="text-lg font-bold">Wildlife Photography</h4>
+                                <p class="text-sm text-gray-200">Click to view full size</p>
+                            </div>
+                            <div class="absolute top-4 right-4">
+                                <i class="fas fa-search-plus text-white text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 7 -->
+                <div class="gallery-item fade-in-on-scroll cursor-pointer group" data-category="macro">
+                    <div class="relative overflow-hidden rounded-xl shadow-lg aspect-square">
+                        <img src="https://source.unsplash.com/600x600/?macro,flower"
+                             alt="Macro Photography"
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="absolute bottom-4 left-4 text-white">
+                                <h4 class="text-lg font-bold">Macro Photography</h4>
+                                <p class="text-sm text-gray-200">Click to view full size</p>
+                            </div>
+                            <div class="absolute top-4 right-4">
+                                <i class="fas fa-search-plus text-white text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 8 -->
+                <div class="gallery-item fade-in-on-scroll cursor-pointer group" data-category="landscape">
+                    <div class="relative overflow-hidden rounded-xl shadow-lg aspect-square">
+                        <img src="https://source.unsplash.com/600x600/?landscape,ocean"
+                             alt="Landscape Photography"
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="absolute bottom-4 left-4 text-white">
+                                <h4 class="text-lg font-bold">Landscape Photography</h4>
+                                <p class="text-sm text-gray-200">Click to view full size</p>
+                            </div>
+                            <div class="absolute top-4 right-4">
+                                <i class="fas fa-search-plus text-white text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 9 -->
+                <div class="gallery-item fade-in-on-scroll cursor-pointer group" data-category="wildlife">
+                    <div class="relative overflow-hidden rounded-xl shadow-lg aspect-square">
+                        <img src="https://source.unsplash.com/600x600/?wildlife,tiger"
+                             alt="Wildlife Photography"
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="absolute bottom-4 left-4 text-white">
+                                <h4 class="text-lg font-bold">Wildlife Photography</h4>
+                                <p class="text-sm text-gray-200">Click to view full size</p>
+                            </div>
+                            <div class="absolute top-4 right-4">
+                                <i class="fas fa-search-plus text-white text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 bg-black/95 z-50 hidden items-center justify-center p-4">
+        <button id="lightbox-close" class="absolute top-4 right-4 text-white text-4xl hover:text-gray-300 transition-colors">
+            <i class="fas fa-times"></i>
+        </button>
+        <button id="lightbox-prev" class="absolute left-4 text-white text-4xl hover:text-gray-300 transition-colors">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button id="lightbox-next" class="absolute right-4 text-white text-4xl hover:text-gray-300 transition-colors">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        <img id="lightbox-image" src="" alt="" class="max-w-full max-h-full object-contain">
+    </div>
+
+    <!-- Trading Dashboard Section -->
+    <section id="trading" class="py-20 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-on-scroll">
+                <h2 class="text-4xl font-bold mb-4">Trading Dashboard</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-4"></div>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    Real-time analytics and performance metrics from algorithmic trading strategies
+                </p>
+            </div>
+
+            <!-- Stats Cards -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <!-- Stat Card 1 -->
+                <div class="bg-gray-800 rounded-xl p-6 fade-in-on-scroll hover:bg-gray-700 transition-colors">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="text-3xl">
+                            <i class="fas fa-chart-line text-green-500"></i>
+                        </div>
+                        <div class="text-xs bg-green-500/20 text-green-500 px-2 py-1 rounded">
+                            +12.5%
+                        </div>
+                    </div>
+                    <h3 class="text-gray-400 text-sm mb-2">Total Returns</h3>
+                    <p class="text-3xl font-bold">$45,320</p>
+                </div>
+
+                <!-- Stat Card 2 -->
+                <div class="bg-gray-800 rounded-xl p-6 fade-in-on-scroll hover:bg-gray-700 transition-colors">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="text-3xl">
+                            <i class="fas fa-percentage text-blue-500"></i>
+                        </div>
+                        <div class="text-xs bg-blue-500/20 text-blue-500 px-2 py-1 rounded">
+                            Live
+                        </div>
+                    </div>
+                    <h3 class="text-gray-400 text-sm mb-2">Win Rate</h3>
+                    <p class="text-3xl font-bold">68.4%</p>
+                </div>
+
+                <!-- Stat Card 3 -->
+                <div class="bg-gray-800 rounded-xl p-6 fade-in-on-scroll hover:bg-gray-700 transition-colors">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="text-3xl">
+                            <i class="fas fa-chart-pie text-purple-500"></i>
+                        </div>
+                        <div class="text-xs bg-purple-500/20 text-purple-500 px-2 py-1 rounded">
+                            Optimal
+                        </div>
+                    </div>
+                    <h3 class="text-gray-400 text-sm mb-2">Sharpe Ratio</h3>
+                    <p class="text-3xl font-bold">2.34</p>
+                </div>
+
+                <!-- Stat Card 4 -->
+                <div class="bg-gray-800 rounded-xl p-6 fade-in-on-scroll hover:bg-gray-700 transition-colors">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="text-3xl">
+                            <i class="fas fa-exclamation-triangle text-yellow-500"></i>
+                        </div>
+                        <div class="text-xs bg-yellow-500/20 text-yellow-500 px-2 py-1 rounded">
+                            Low
+                        </div>
+                    </div>
+                    <h3 class="text-gray-400 text-sm mb-2">Max Drawdown</h3>
+                    <p class="text-3xl font-bold">-8.2%</p>
+                </div>
+            </div>
+
+            <!-- Charts and Tables -->
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- Performance Chart -->
+                <div class="bg-gray-800 rounded-xl p-6 fade-in-on-scroll">
+                    <h3 class="text-xl font-bold mb-6">Strategy Performance</h3>
+                    <div class="bg-gray-700 rounded-lg p-6 h-64 flex items-end justify-around gap-2">
+                        <div class="flex flex-col items-center gap-2 flex-1">
+                            <div class="w-full bg-gradient-to-t from-green-500 to-green-400 rounded-t" style="height: 45%"></div>
+                            <span class="text-xs text-gray-400">Jan</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2 flex-1">
+                            <div class="w-full bg-gradient-to-t from-green-500 to-green-400 rounded-t" style="height: 60%"></div>
+                            <span class="text-xs text-gray-400">Feb</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2 flex-1">
+                            <div class="w-full bg-gradient-to-t from-green-500 to-green-400 rounded-t" style="height: 52%"></div>
+                            <span class="text-xs text-gray-400">Mar</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2 flex-1">
+                            <div class="w-full bg-gradient-to-t from-green-500 to-green-400 rounded-t" style="height: 75%"></div>
+                            <span class="text-xs text-gray-400">Apr</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2 flex-1">
+                            <div class="w-full bg-gradient-to-t from-green-500 to-green-400 rounded-t" style="height: 68%"></div>
+                            <span class="text-xs text-gray-400">May</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2 flex-1">
+                            <div class="w-full bg-gradient-to-t from-green-500 to-green-400 rounded-t" style="height: 82%"></div>
+                            <span class="text-xs text-gray-400">Jun</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Trades Table -->
+                <div class="bg-gray-800 rounded-xl p-6 fade-in-on-scroll">
+                    <h3 class="text-xl font-bold mb-6">Recent Trades</h3>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm">
+                            <thead class="text-gray-400 border-b border-gray-700">
+                                <tr>
+                                    <th class="text-left py-3">Symbol</th>
+                                    <th class="text-left py-3">Type</th>
+                                    <th class="text-left py-3">P&L</th>
+                                    <th class="text-left py-3">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-gray-300">
+                                <tr class="border-b border-gray-700/50">
+                                    <td class="py-3 font-medium">SPY</td>
+                                    <td class="py-3">Call Spread</td>
+                                    <td class="py-3 text-green-500">+$245</td>
+                                    <td class="py-3"><span class="px-2 py-1 bg-green-500/20 text-green-500 rounded text-xs">Closed</span></td>
+                                </tr>
+                                <tr class="border-b border-gray-700/50">
+                                    <td class="py-3 font-medium">QQQ</td>
+                                    <td class="py-3">Iron Condor</td>
+                                    <td class="py-3 text-green-500">+$180</td>
+                                    <td class="py-3"><span class="px-2 py-1 bg-blue-500/20 text-blue-500 rounded text-xs">Open</span></td>
+                                </tr>
+                                <tr class="border-b border-gray-700/50">
+                                    <td class="py-3 font-medium">SPY</td>
+                                    <td class="py-3">Put Spread</td>
+                                    <td class="py-3 text-red-500">-$92</td>
+                                    <td class="py-3"><span class="px-2 py-1 bg-green-500/20 text-green-500 rounded text-xs">Closed</span></td>
+                                </tr>
+                                <tr class="border-b border-gray-700/50">
+                                    <td class="py-3 font-medium">IWM</td>
+                                    <td class="py-3">Call Spread</td>
+                                    <td class="py-3 text-green-500">+$156</td>
+                                    <td class="py-3"><span class="px-2 py-1 bg-green-500/20 text-green-500 rounded text-xs">Closed</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 font-medium">QQQ</td>
+                                    <td class="py-3">Butterfly</td>
+                                    <td class="py-3 text-green-500">+$203</td>
+                                    <td class="py-3"><span class="px-2 py-1 bg-blue-500/20 text-blue-500 rounded text-xs">Open</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Risk Metrics -->
+            <div class="mt-8 bg-gray-800 rounded-xl p-6 fade-in-on-scroll">
+                <h3 class="text-xl font-bold mb-6">Risk Metrics</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="text-gray-400">Value at Risk (VaR)</span>
+                            <span class="font-semibold">$2,340</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2">
+                            <div class="bg-gradient-to-r from-yellow-500 to-orange-500 h-2 rounded-full" style="width: 45%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="text-gray-400">Beta</span>
+                            <span class="font-semibold">0.85</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2">
+                            <div class="bg-gradient-to-r from-blue-500 to-cyan-500 h-2 rounded-full" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="text-gray-400">Alpha</span>
+                            <span class="font-semibold">1.23</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2">
+                            <div class="bg-gradient-to-r from-green-500 to-emerald-500 h-2 rounded-full" style="width: 68%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-on-scroll">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Get In Touch</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-4"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Let's discuss Machine Learning, Trading strategies, or potential collaborations
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div class="fade-in-on-scroll">
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                            <input type="text"
+                                   id="name"
+                                   name="name"
+                                   required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                            <input type="email"
+                                   id="email"
+                                   name="email"
+                                   required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow">
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
+                            <input type="text"
+                                   id="subject"
+                                   name="subject"
+                                   required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                            <textarea id="message"
+                                      name="message"
+                                      rows="5"
+                                      required
+                                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow resize-none"></textarea>
+                        </div>
+                        <button type="submit"
+                                class="w-full px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-lg hover:shadow-xl transform hover:scale-105 transition-all">
+                            Send Message
+                            <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="fade-in-on-scroll">
+                    <div class="bg-gradient-to-br from-primary to-secondary rounded-2xl p-8 text-white h-full flex flex-col justify-center">
+                        <h3 class="text-2xl font-bold mb-8">Let's Connect</h3>
+
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="text-2xl mt-1">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Email</h4>
+                                    <p class="text-white/80">your.email@example.com</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="text-2xl mt-1">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Location</h4>
+                                    <p class="text-white/80">Your City, Country</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="text-2xl mt-1">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Education</h4>
+                                    <p class="text-white/80">Computer Science Student</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 pt-8 border-t border-white/20">
+                            <h4 class="font-semibold mb-4">Follow Me</h4>
+                            <div class="flex gap-4">
+                                <a href="https://github.com/madhawadissanayake"
+                                   target="_blank"
+                                   class="w-12 h-12 bg-white/20 hover:bg-white/30 rounded-lg flex items-center justify-center transition-colors">
+                                    <i class="fab fa-github text-xl"></i>
+                                </a>
+                                <a href="#"
+                                   class="w-12 h-12 bg-white/20 hover:bg-white/30 rounded-lg flex items-center justify-center transition-colors">
+                                    <i class="fab fa-linkedin text-xl"></i>
+                                </a>
+                                <a href="#"
+                                   class="w-12 h-12 bg-white/20 hover:bg-white/30 rounded-lg flex items-center justify-center transition-colors">
+                                    <i class="fab fa-twitter text-xl"></i>
+                                </a>
+                                <a href="#"
+                                   class="w-12 h-12 bg-white/20 hover:bg-white/30 rounded-lg flex items-center justify-center transition-colors">
+                                    <i class="fab fa-instagram text-xl"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-4">
+                        Madhawa Dissanayake
+                    </h3>
+                    <p class="text-gray-400">
+                        CS Student passionate about Machine Learning, Algorithmic Trading, and Wildlife Photography.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#home" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#about" class="hover:text-white transition-colors">About</a></li>
+                        <li><a href="#projects" class="hover:text-white transition-colors">Projects</a></li>
+                        <li><a href="#photography" class="hover:text-white transition-colors">Photography</a></li>
+                        <li><a href="#trading" class="hover:text-white transition-colors">Trading</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Technologies</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Python & Machine Learning</li>
+                        <li>TensorFlow & PyTorch</li>
+                        <li>Algorithmic Trading</li>
+                        <li>Data Science & Analytics</li>
+                        <li>High-Performance Computing</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                    &copy; 2026 Madhawa Dissanayake. All rights reserved.
+                </p>
+                <div class="flex gap-4">
+                    <a href="https://github.com/madhawadissanayake" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
